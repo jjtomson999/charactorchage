@@ -13,9 +13,9 @@ btnEl.addEventListener("click", async function(){
   try{
    btnEl.disabled=true;
    btnEl.disabled=false;
+   animeContainerEL.style.display="block";
    animeNameEl.innerText='Let us start';
    animeImage.src="spinner.svg";
-   animeContainerEL.style.display="block";
    animeNameEl.innerText='getting pic...';
    const response = await fetch("https://api.catboys.com/img")
    const data = await response.json();
@@ -23,7 +23,7 @@ btnEl.addEventListener("click", async function(){
    animeImage.src=data.url;
    animeNameEl.innerText=data.artist;
    
-   title.style.color=`rgb(${i},${230},${120})`;
+   title.style.color=`rgb(${i},${255-i},${120})`;
 
   }catch(error){
        console.log("error occured");
