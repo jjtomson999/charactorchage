@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Get anime pic</h1>
+    <button class="btn" id="btn">
+      Get Anime
+    </button>
+    <div class="anime-container">
+       <img class="anime-img" src="https://i.pinimg.com/736x/9d/e4/72/9de4729c055b75c2d82b72d5c74cd665.jpg" alt="">
+      
+      <h3 class="anime-name">Anime name</h3>
+    </div>
+  </div>
+</body>
+<style>
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right,rgb(196, 196, 161) ,lightyellow);
+  height:100vh;
+  }
+  .container{
+    text-align: center;
+  }
+  .container h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 26px;
+    
+  }
+  .anime-container{
+     height: 100%;
+     width: 100%;
+     box-shadow:-1px 6px 8px 6px;
+     background: #fff;
+  }
+  .anime-img{
+    max-width:300px;
+    height: 300px;
+    object-fit: cover;
+
+  }
+.btn{
+  width: 180px;
+  height: 30px;
+  background-color: green;
+  border: 2px solid green;
+  border-radius: 8px;
+  padding: 0 12px;
+  margin: 40px auto 60px auto;
+  color: white;
+  cursor: pointer;
+}
+.btn:disabled{
+  background: gray;
+  cursor: not-allowed;
+}
+h3{
+  width: 400px;
+  margin: 0 auto;
+  background: green;
+  border-radius: 10px;
+  color: white;
+  
+}
+.anime-container{
+  display: none;
+}
+</style>
+</html>
